@@ -46,6 +46,12 @@
         from { opacity: 0; }
         to { opacity: 1; }
       }
+      .image-placeholder {
+        background: #f1f1f1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
     }
   </style>
 </head>
@@ -59,7 +65,7 @@
       </div>
       <div class="hidden md:flex space-x-8">
         <a href="#quotes" class="text-gray-600 hover:text-primary transition-colors">励志语句</a>
-        <a href="#pets" class="text-gray-600 hover:text-primary transition-colors">萌宠治愈</a>
+        <a href="#healing" class="text-gray-600 hover:text-primary transition-colors">治愈</a>
         <a href="#games" class="text-gray-600 hover:text-primary transition-colors">摸鱼游戏</a>
       </div>
       <button class="md:hidden text-gray-600 focus:outline-none" id="menu-toggle">
@@ -71,7 +77,7 @@
     <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
       <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
         <a href="#quotes" class="text-gray-600 hover:text-primary py-2 transition-colors">励志语句</a>
-        <a href="#pets" class="text-gray-600 hover:text-primary py-2 transition-colors">萌宠治愈</a>
+        <a href="#healing" class="text-gray-600 hover:text-primary py-2 transition-colors">治愈</a>
         <a href="#games" class="text-gray-600 hover:text-primary py-2 transition-colors">摸鱼游戏</a>
       </div>
     </div>
@@ -120,50 +126,74 @@
     </div>
   </section>
 
-  <!-- 萌宠图片区域 -->
-  <section id="pets" class="py-16 bg-neutral">
+  <!-- 治愈图片区域 - 4个模块保持对称 -->
+  <section id="healing" class="py-16 bg-neutral">
     <div class="container mx-auto px-4">
       <div class="text-center mb-12">
         <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-gray-800 mb-3">
-          萌宠治愈
+          治愈
         </h2>
         <p class="text-gray-600 max-w-2xl mx-auto">
           工作再忙，也要给自己一点治愈时光
         </p>
       </div>
       
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- 宠物图片 1 -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- 治愈图片 1 - 自然风景 -->
         <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover group">
           <div class="relative pb-[75%] overflow-hidden">
-            <img src="https://source.unsplash.com/random/600x450/?cat,dog" alt="可爱的猫咪或狗狗" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+            <img src="https://picsum.photos/seed/nature1/600/450" alt="宁静的自然风景，有助于放松心情" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="image-placeholder absolute inset-0" style="display: none;">
+              <i class="fa fa-leaf text-primary/30 text-4xl"></i>
+            </div>
           </div>
           <div class="p-4 text-center">
-            <button class="text-primary hover:text-primary/80 text-sm font-medium refresh-pet">
+            <button class="text-primary hover:text-primary/80 text-sm font-medium refresh-image">
               <i class="fa fa-refresh mr-1"></i> 换一张
             </button>
           </div>
         </div>
         
-        <!-- 宠物图片 2 -->
+        <!-- 治愈图片 2 - 动物 -->
         <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover group">
           <div class="relative pb-[75%] overflow-hidden">
-            <img src="https://source.unsplash.com/random/600x450/?puppy,kitten" alt="可爱的猫咪或狗狗" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+            <img src="https://picsum.photos/seed/animal1/600/450" alt="可爱的动物，带来治愈感" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="image-placeholder absolute inset-0" style="display: none;">
+              <i class="fa fa-paw text-primary/30 text-4xl"></i>
+            </div>
           </div>
           <div class="p-4 text-center">
-            <button class="text-primary hover:text-primary/80 text-sm font-medium refresh-pet">
+            <button class="text-primary hover:text-primary/80 text-sm font-medium refresh-image">
               <i class="fa fa-refresh mr-1"></i> 换一张
             </button>
           </div>
         </div>
         
-        <!-- 宠物图片 3 -->
+        <!-- 治愈图片 3 - 风景 -->
         <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover group">
           <div class="relative pb-[75%] overflow-hidden">
-            <img src="https://source.unsplash.com/random/600x450/?pet,animal" alt="可爱的猫咪或狗狗" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+            <img src="https://picsum.photos/seed/landscape1/600/450" alt="美丽的风景，让人心情愉悦" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="image-placeholder absolute inset-0" style="display: none;">
+              <i class="fa fa-mountain text-primary/30 text-4xl"></i>
+            </div>
           </div>
           <div class="p-4 text-center">
-            <button class="text-primary hover:text-primary/80 text-sm font-medium refresh-pet">
+            <button class="text-primary hover:text-primary/80 text-sm font-medium refresh-image">
+              <i class="fa fa-refresh mr-1"></i> 换一张
+            </button>
+          </div>
+        </div>
+        
+        <!-- 治愈图片 4 - 静物/艺术 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover group">
+          <div class="relative pb-[75%] overflow-hidden">
+            <img src="https://picsum.photos/seed/art1/600/450" alt="精美的静物或艺术作品，带来平静感" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="image-placeholder absolute inset-0" style="display: none;">
+              <i class="fa fa-paint-brush text-primary/30 text-4xl"></i>
+            </div>
+          </div>
+          <div class="p-4 text-center">
+            <button class="text-primary hover:text-primary/80 text-sm font-medium refresh-image">
               <i class="fa fa-refresh mr-1"></i> 换一张
             </button>
           </div>
@@ -184,36 +214,18 @@
         </p>
       </div>
       
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-        <!-- 游戏 1 -->
-        <a href="https://www.freeonlinegames.com/play/2048.html" target="_blank" class="block bg-neutral rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-all card-hover">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
+        <!-- 游戏 1: 2048 -->
+        <a href="https://2048game.com/" target="_blank" class="block bg-neutral rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-all card-hover">
           <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
             <i class="fa fa-cubes text-primary text-2xl"></i>
           </div>
-          <h3 class="font-semibold mb-2">2048</h3>
+          <h3 class="font-semibold mb-2">2048游戏</h3>
           <p class="text-gray-600 text-sm">经典数字拼图游戏</p>
         </a>
         
-        <!-- 游戏 2 -->
-        <a href="https://www.freeonlinegames.com/play/sudoku.html" target="_blank" class="block bg-neutral rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-all card-hover">
-          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-            <i class="fa fa-th text-primary text-2xl"></i>
-          </div>
-          <h3 class="font-semibold mb-2">数独</h3>
-          <p class="text-gray-600 text-sm">锻炼逻辑思维</p>
-        </a>
-        
-        <!-- 游戏 3 -->
-        <a href="https://www.freeonlinegames.com/play/memory.html" target="_blank" class="block bg-neutral rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-all card-hover">
-          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-            <i class="fa fa-picture-o text-primary text-2xl"></i>
-          </div>
-          <h3 class="font-semibold mb-2">记忆翻牌</h3>
-          <p class="text-gray-600 text-sm">考验记忆力</p>
-        </a>
-        
-        <!-- 游戏 4 -->
-        <a href="https://www.freeonlinegames.com/play/tetris.html" target="_blank" class="block bg-neutral rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-all card-hover">
+        <!-- 游戏 2: 俄罗斯方块 -->
+        <a href="https://minesweeper.cn/falling/" target="_blank" class="block bg-neutral rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-all card-hover">
           <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
             <i class="fa fa-cube text-primary text-2xl"></i>
           </div>
@@ -257,12 +269,23 @@
       { text: "成功不是偶然，而是日复一日的坚持。", source: "— 现代箴言" },
       { text: "每一个微小的进步，都值得被肯定。", source: "— 现代箴言" },
       { text: "专注当下，做好眼前的每一件事。", source: "— 现代箴言" },
-      { text: "休息是为了更好地前进，不要过度消耗自己。", source: "— 现代箴言" },
-      { text: "会当凌绝顶，一览众山小。", source: "— 杜甫" },
-      { text: "不畏浮云遮望眼，自缘身在最高层。", source: "— 王安石" },
-      { text: "只要功夫深，铁杵磨成针。", source: "— 祝穆" },
-      { text: "业精于勤，荒于嬉；行成于思，毁于随。", source: "— 韩愈" },
-      { text: "微笑面对每一天，好运自然会降临。", source: "— 现代箴言" }
+      { text: "休息是为了更好地前进，不要过度消耗自己。", source: "— 现代箴言" }
+    ];
+
+    // 治愈系图片种子列表（增加第四类：静物/艺术）
+    const healingSeeds = [
+      // 自然风景
+      'nature1', 'nature2', 'nature3', 'nature4', 'nature5',
+      'nature6', 'nature7', 'nature8', 'nature9', 'nature10',
+      // 动物
+      'animal1', 'animal2', 'animal3', 'animal4', 'animal5',
+      'animal6', 'animal7', 'animal8', 'animal9', 'animal10',
+      // 风景
+      'landscape1', 'landscape2', 'landscape3', 'landscape4', 'landscape5',
+      'landscape6', 'landscape7', 'landscape8', 'landscape9', 'landscape10',
+      // 静物/艺术
+      'art1', 'art2', 'art3', 'art4', 'art5',
+      'art6', 'art7', 'art8', 'art9', 'art10'
     ];
 
     // DOM 元素
@@ -273,7 +296,7 @@
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
     const backToTopButton = document.getElementById('back-to-top');
-    const refreshPetButtons = document.querySelectorAll('.refresh-pet');
+    const refreshImageButtons = document.querySelectorAll('.refresh-image');
 
     // 显示随机语句
     function showRandomQuote() {
@@ -294,20 +317,21 @@
       }, 300);
     }
 
-    // 刷新宠物图片
-    function refreshPetImage(button) {
+    // 刷新治愈图片
+    function refreshHealingImage(button) {
       const card = button.closest('.card-hover');
       const img = card.querySelector('img');
-      const petTypes = ['cat', 'dog', 'puppy', 'kitten', 'pet', 'animal'];
-      const randomType = petTypes[Math.floor(Math.random() * petTypes.length)];
+      const placeholder = card.querySelector('.image-placeholder');
       
-      // 添加加载效果
-      img.style.opacity = '0.5';
+      // 显示占位符
+      placeholder.style.display = 'flex';
+      img.style.opacity = '0';
       
-      // 生成随机数防止缓存
-      const randomNum = Math.floor(Math.random() * 10000);
-      // 使用专门的宠物图片API
-      const newSrc = `https://source.unsplash.com/random/600x450/?${randomType}&random=${randomNum}`;
+      // 随机选择一个种子
+      const randomSeed = healingSeeds[Math.floor(Math.random() * healingSeeds.length)];
+      
+      // 构建图片URL
+      const newSrc = `https://picsum.photos/seed/${randomSeed}/600/450`;
       
       // 加载新图片
       const newImg = new Image();
@@ -315,6 +339,16 @@
       newImg.onload = function() {
         img.src = newSrc;
         img.style.opacity = '1';
+        placeholder.style.display = 'none'; // 隐藏占位符
+      };
+      
+      // 图片加载失败处理
+      newImg.onerror = function() {
+        // 尝试另一个种子
+        const anotherSeed = healingSeeds[Math.floor(Math.random() * healingSeeds.length)];
+        img.src = `https://picsum.photos/seed/${anotherSeed}/600/450`;
+        img.style.opacity = '1';
+        placeholder.style.display = 'none';
       };
     }
 
@@ -381,9 +415,9 @@
       });
     });
 
-    // 宠物图片刷新按钮
-    refreshPetButtons.forEach(button => {
-      button.addEventListener('click', () => refreshPetImage(button));
+    // 图片刷新按钮
+    refreshImageButtons.forEach(button => {
+      button.addEventListener('click', () => refreshHealingImage(button));
     });
 
     // 初始加载
@@ -391,17 +425,35 @@
       // 随机显示一条语录
       showRandomQuote();
       
-      // 图片加载动画
+      // 检查图片加载状态
       const images = document.querySelectorAll('img');
       images.forEach(img => {
+        const placeholder = img.nextElementSibling;
+        
         img.classList.add('opacity-0', 'transition-opacity', 'duration-500');
+        
         img.onload = function() {
           this.classList.remove('opacity-0');
           this.classList.add('opacity-100');
-        }
+          if (placeholder) placeholder.style.display = 'none';
+        };
+        
+        img.onerror = function() {
+          // 加载失败时尝试重新加载
+          const src = this.src;
+          this.src = '';
+          setTimeout(() => {
+            this.src = src;
+          }, 1000);
+        };
+        
+        // 如果图片已经加载完成
         if (img.complete) {
           img.classList.remove('opacity-0');
           img.classList.add('opacity-100');
+          if (placeholder) placeholder.style.display = 'none';
+        } else {
+          if (placeholder) placeholder.style.display = 'flex';
         }
       });
     });
